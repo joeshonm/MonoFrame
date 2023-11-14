@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32A1470F2B040CC900686EDB /* TogglesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A1470E2B040CC900686EDB /* TogglesView.swift */; };
 		3A5CF47B2B01382800ED655F /* MonoFrameDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5CF47A2B01382800ED655F /* MonoFrameDemoApp.swift */; };
 		3A5CF47D2B01382800ED655F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5CF47C2B01382800ED655F /* ContentView.swift */; };
 		3A5CF47F2B01382A00ED655F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A5CF47E2B01382A00ED655F /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		32A1470E2B040CC900686EDB /* TogglesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TogglesView.swift; sourceTree = "<group>"; };
 		3A5CF4772B01382800ED655F /* MonoFrameDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonoFrameDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A5CF47A2B01382800ED655F /* MonoFrameDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonoFrameDemoApp.swift; sourceTree = "<group>"; };
 		3A5CF47C2B01382800ED655F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -104,7 +106,6 @@
 				3A5CF47A2B01382800ED655F /* MonoFrameDemoApp.swift */,
 				3A5CF47C2B01382800ED655F /* ContentView.swift */,
 				3A5CF4A82B013C8C00ED655F /* Styles */,
-				3A5CF4A92B013C9500ED655F /* Components */,
 				3A5CF47E2B01382A00ED655F /* Assets.xcassets */,
 				3A5CF4802B01382A00ED655F /* Preview Content */,
 			);
@@ -147,15 +148,9 @@
 			isa = PBXGroup;
 			children = (
 				3A5CF4AA2B013D9100ED655F /* ButtonsView.swift */,
+				32A1470E2B040CC900686EDB /* TogglesView.swift */,
 			);
 			path = Styles;
-			sourceTree = "<group>";
-		};
-		3A5CF4A92B013C9500ED655F /* Components */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,6 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32A1470F2B040CC900686EDB /* TogglesView.swift in Sources */,
 				3A5CF4AB2B013D9100ED655F /* ButtonsView.swift in Sources */,
 				3A5CF47D2B01382800ED655F /* ContentView.swift in Sources */,
 				3A5CF47B2B01382800ED655F /* MonoFrameDemoApp.swift in Sources */,

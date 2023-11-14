@@ -16,14 +16,13 @@ public struct PrimaryButtonStyle: ButtonStyle {
         configuration.label
             .frame(height: size == .normal ? MonoFrame.ButtonHeight.normal : MonoFrame.ButtonHeight.small)
             .padding([.horizontal], 10)
-            .background(MonoFrame.shared.colors.primaryColor)
+            .background(MonoFrame.shared.colors.primary)
             .foregroundStyle(.white)
             .clipShape(Capsule())
             .overlay(
                 Capsule(style: .continuous)
-                    .stroke(MonoFrame.shared.colors.primaryColor, style: StrokeStyle(lineWidth: 1))
+                    .stroke(MonoFrame.shared.colors.primary, style: StrokeStyle(lineWidth: 1))
             )
-
-
+            .opacity(configuration.isPressed ? 0.5 : 1.0)
     }
 }

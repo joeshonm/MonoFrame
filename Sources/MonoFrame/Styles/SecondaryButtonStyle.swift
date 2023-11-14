@@ -17,12 +17,13 @@ public struct SecondaryButtonStyle: ButtonStyle {
             .frame(height: size == .normal ? MonoFrame.ButtonHeight.normal : MonoFrame.ButtonHeight.small)
             .padding([.horizontal], 10)
             .background(.white)
-            .foregroundStyle(MonoFrame.shared.colors.primaryColor)
+            .foregroundStyle(MonoFrame.shared.colors.primary)
             .clipShape(Capsule())
             .overlay(
                 Capsule(style: .continuous)
-                    .stroke(MonoFrame.shared.colors.primaryColor, style: StrokeStyle(lineWidth: 2))
+                    .stroke(MonoFrame.shared.colors.primary, style: StrokeStyle(lineWidth: 2))
             )
+            .opacity(configuration.isPressed ? 0.5 : 1.0)
 
 
     }

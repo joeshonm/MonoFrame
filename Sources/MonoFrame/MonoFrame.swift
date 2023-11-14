@@ -6,14 +6,16 @@ import SwiftUI
 @available(macOS 10.15, *)
 public class MonoFrame: ObservableObject {
     
+    // MARK: Colors
     @Published public var colors = MonoFrameColors()
 
     public struct MonoFrameColors {
-        public var primaryColor: Color = .black
+        public var primary: Color = .black
 
         public init() {}
     }
-
+    
+    // MARK: Button Styles
     var buttonStyles = ButtonStyles()
 
     public struct ButtonHeight {
@@ -35,6 +37,18 @@ public class MonoFrame: ObservableObject {
             return SecondaryButtonStyle(size: size)
         }
     }
+    
+    // MARK: Toggle Styles
+    var toggleStyles = ToggleStyles()
+    
+    public struct ToggleStyles {
+        public static func primary() -> PrimaryToggleStyle {
+            return PrimaryToggleStyle()
+        }
+        public static func checkbox() -> CheckboxToggleStyle {
+            return CheckboxToggleStyle()
+        }
+    }
 
     public static let shared: MonoFrame = MonoFrame()
 
@@ -43,7 +57,7 @@ public class MonoFrame: ObservableObject {
     }
 
     public func updateSettings(primaryColor: Color) {
-        colors.primaryColor = primaryColor
+        colors.primary = primaryColor
     }
 
 }

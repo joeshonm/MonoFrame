@@ -9,7 +9,7 @@ import SwiftUI
 import MonoFrame
 
 struct ButtonsView: View {
-    @EnvironmentObject var theme: MonoFrame
+
     var body: some View {
         List {
             Section("Normal") {

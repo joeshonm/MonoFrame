@@ -11,8 +11,9 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             List {
-                Section("Styles") {
+                Section("Components") {
                     NavigationLink("Buttons", destination: ButtonsView())
+                    NavigationLink("Toggles", destination: TogglesView())
                 }
 
             }
