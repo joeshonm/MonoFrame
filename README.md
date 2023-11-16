@@ -1,5 +1,5 @@
 # MonoFrame
-> A UI Kit great for prototyping for SwiftUI.
+> A UI Kit great for prototyping in SwiftUI.
 
 [![Swift Version][swift-image]][swift-url]
 [![Build Status][travis-image]][travis-url]
@@ -28,9 +28,28 @@ let package = Package(
 
 
 ```swift
+import SwiftUI
 import MonoFrame
-let proj = Class(param: String?)
-proj.run()
+
+@main
+struct MonoFrameDemoApp: App {
+    @StateObject var theme: MonoFrame = MonoFrame.shared
+
+    init() {
+
+    }
+
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+                .environmentObject(theme)
+                .onAppear {
+                    // Pass in the primary color you want to use or default to black
+                    theme.updateSettings(primaryColor: .orange)
+                }
+        }
+    }
+}
 ```
 
 
@@ -65,7 +84,7 @@ Distributed under the XYZ license. See ``LICENSE`` for more information.
 
 [https://github.com/yourname/github-link](https://github.com/dbader/)
 
-[swift-image]:https://img.shields.io/badge/swift-3.0-orange.svg
+[swift-image]:https://img.shields.io/badge/swift-5.0-orange.svg
 [swift-url]: https://swift.org/
 [license-image]: https://img.shields.io/badge/License-MIT-blue.svg
 [license-url]: LICENSE
