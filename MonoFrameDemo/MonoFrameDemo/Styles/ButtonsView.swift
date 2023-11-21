@@ -20,7 +20,16 @@ struct ButtonsView: View {
                         .frame(maxWidth: .infinity)
                 })
                 .buttonStyle(MonoFrame.ButtonStyles.primary())
+                
+                Button(action: {
 
+                }, label: {
+                    Text("Primary Button Disabled")
+                        .frame(maxWidth: .infinity)
+                })
+                .buttonStyle(MonoFrame.ButtonStyles.primary())
+                .disabled(true)
+                
                 Button(action: {
 
                 }, label: {
@@ -28,6 +37,15 @@ struct ButtonsView: View {
                         .frame(maxWidth: .infinity)
                 })
                 .buttonStyle(MonoFrame.ButtonStyles.secondary())
+                
+                Button(action: {
+
+                }, label: {
+                    Text("Secondary Button Disabled")
+                        .frame(maxWidth: .infinity)
+                })
+                .buttonStyle(MonoFrame.ButtonStyles.secondary())
+                .disabled(true)
 
             }
 

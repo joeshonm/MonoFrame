@@ -11,6 +11,8 @@ import SwiftUI
 public struct SecondaryButtonStyle: ButtonStyle {
 
     public let size: MonoFrame.ButtonSize
+    
+    @Environment(\.isEnabled) var isEnabled: Bool
 
     public func makeBody(configuration: Configuration) -> some View {
         configuration.label
@@ -23,7 +25,7 @@ public struct SecondaryButtonStyle: ButtonStyle {
                 Capsule(style: .continuous)
                     .stroke(MonoFrame.shared.colors.primary, style: StrokeStyle(lineWidth: 2))
             )
-            .opacity(configuration.isPressed ? 0.5 : 1.0)
+            .opacity(configuration.isPressed || !isEnabled ? 0.5 : 1.0)
 
 
     }
